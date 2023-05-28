@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Rechercher"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        app:layout_anchorGravity="end|bottom" />
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navActions"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:layout_gravity="bottom"
+        android:padding="5dp"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/btnAppeler"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Appeler centre d'appel"
+            app:backgroundTint="#2196F3" />
+
+        <Button
+            android:id="@+id/btnSms"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Envoyer SMS"
+            app:backgroundTint="#00BCD4"
+            app:layout_anchor="@+id/navActions"
+            app:layout_anchorGravity="start|center" />
+
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="95dp"
+            android:layout_gravity="right"
+            android:text="Envoyer Email"
+            app:backgroundTint="#3F51B5"
+            app:layout_anchor="@+id/navActions"
+            app:layout_anchorGravity="end|top" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
